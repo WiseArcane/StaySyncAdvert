@@ -1198,6 +1198,14 @@ body::before {
   animation-delay: 180ms;
 }
 
+.developer-section.is-open .developer-card:nth-child(4) {
+  animation-delay: 270ms;
+}
+
+.developer-section.is-open .developer-card:nth-child(5) {
+  animation-delay: 360ms;
+}
+
 .developer-card:hover {
   transform: translateY(-4px);
   border-color: rgba(187, 138, 47, 0.3);
