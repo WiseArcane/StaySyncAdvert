@@ -3,174 +3,196 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hannah Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      background: #f9fafb;
-      color: #111827;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    header {
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 700;
-    }
-
-    header p {
-      margin-top: 6px;
-      color: #6b7280;
-    }
-
-    section {
-      margin-bottom: 30px;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-    }
-
-    h2, h3, h4 {
-      margin-top: 0;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    p {
-      margin: 0;
-      color: #374151;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 0;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.9rem;
-    }
-
-    th, td {
-      border-bottom: 1px solid #e5e7eb;
-      padding: 10px;
-      text-align: left;
-    }
-
-    th {
-      font-weight: 600;
-      color: #374151;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      text-decoration: none;
-      color: #ffffff;
-      background: #111827;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #374151;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        margin: 20px auto;
-      }
-    }
-  </style>
+  <title>Hannah Khrissel Disu Sabado | StaySync Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
-
-<body>
-  <div class="container">
-
-    <header>
-      <h1>Hannah Khrissel Disu Sabado</h1>
-      <p>BSIT 1-03</p>
+<body class="portfolio-page">
+  <div class="page-shell portfolio-shell">
+    <header class="topbar">
+      <a class="brand brand-link" href="../index.html" aria-label="Back to StaySync homepage">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 72 72" role="presentation">
+            <defs>
+              <linearGradient id="pinGradient-hannah" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffb347" />
+                <stop offset="55%" stop-color="#ff8f2d" />
+                <stop offset="100%" stop-color="#ff7f1f" />
+              </linearGradient>
+              <linearGradient id="towerGradient-hannah" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d9f1ff" />
+                <stop offset="100%" stop-color="#86c6ea" />
+              </linearGradient>
+              <linearGradient id="towerDarkGradient-hannah" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#d8e8fb" />
+              </linearGradient>
+            </defs>
+            <path d="M36 7c11.7 0 21.2 9 21.2 20.1 0 14-13.9 24.4-21.2 37.9C28.7 51.5 14.8 41.1 14.8 27.1 14.8 16 24.3 7 36 7Z" fill="url(#pinGradient-hannah)" />
+            <path d="M36 61.5c-7.9-13.7-18.6-23.2-18.6-34.3C17.4 17.8 25.5 10 36 10s18.6 7.8 18.6 17.2c0 11.1-10.7 20.6-18.6 34.3Z" fill="none" stroke="#ffcf8b" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M24.5 34.5 24.5 23.8 38.6 18.3 38.6 44.8 24.5 42.2Z" fill="url(#towerGradient-hannah)" stroke="#1b4f95" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M39.8 12.8 52.2 19.5 52.2 40.7 39.8 47.1Z" fill="url(#towerDarkGradient-hannah)" stroke="#1e4f96" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M38.6 18.3 52.2 19.5 39.8 12.8 24.5 23.8Z" fill="#8bb3ea" opacity="0.55" />
+            <path d="M22.5 45.8c4.8 4.5 20.2 5.5 27.6 0" fill="none" stroke="#7dbb1d" stroke-width="4.6" stroke-linecap="round" />
+            <path d="M19 42.6c0-2.6 2.2-4.8 5-4.8 1.2 0 2.2.3 3.1 1 .2-3.2 2.8-5.6 6-5.6 3.5 0 6.3 2.7 6.3 6.2 0 .6-.1 1.1-.2 1.6 1.7.1 3 1.5 3 3.2 0 1.8-1.5 3.3-3.3 3.3H24.1c-2.8 0-5.1-2.2-5.1-4.9Z" fill="#15906e" />
+            <g fill="#ffffff" opacity="0.95">
+              <rect x="28.1" y="27.6" width="3.8" height="4.4" rx="0.6" />
+              <rect x="34.2" y="25.5" width="3.8" height="4.4" rx="0.6" />
+              <rect x="28.1" y="34.6" width="3.8" height="4.4" rx="0.6" />
+              <rect x="34.2" y="32.8" width="3.8" height="4.4" rx="0.6" />
+              <rect x="43.2" y="22.8" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+              <rect x="47.9" y="24.1" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+              <rect x="45.5" y="30.1" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+            </g>
+            <rect x="31.7" y="42.2" width="3.7" height="6.9" rx="0.7" fill="#2562b3" />
+          </svg>
+        </span>
+        <div class="brand-stack">
+          <span class="brand-name"><span class="brand-stay">Stay</span><span class="brand-sync">Sync</span></span>
+          <span class="brand-subtitle">Team Portfolio</span>
+        </div>
+      </a>
+      <div class="topbar-right">
+        <a class="topbar-chip" href="../index.html">Back To StaySync</a>
+        <span class="topbar-chip portfolio-chip-static">Contact Pending</span>
+      </div>
     </header>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        My name is Hannah. I am currently an IT student with a great interest in coding
-        and a constant desire to learn new things. In my free time, I enjoy viewing the sunrise
-        and sunset, as well as spending time with my friends. I also enjoy reading books
-        and playing basketball whenever I have the opportunity.
-      </p>
-    </section>
+    <main class="portfolio-main">
+      <section class="portfolio-hero">
+        <article class="portfolio-panel">
+          <span class="eyebrow">StaySync Portfolio</span>
+          <p class="portfolio-role">Project Manager</p>
+          <h1>Hannah Khrissel Disu Sabado</h1>
+          <p class="portfolio-summary">
+            I am an IT student who enjoys coding, learning new things, and bringing thoughtful energy into both class work and the moments outside it that keep me inspired.
+          </p>
+          <div class="portfolio-actions">
+            <a class="download-button" href="#about">Read Profile</a>
+            <a class="portfolio-secondary" href="#schedule">View Schedule</a>
+          </div>
+        </article>
 
-    <section>
-      <h3>Major Subjects</h3>
-      <ul>
-        <li>Human Computer Interaction</li>
-        <li>Discrete Structures</li>
-        <li>Computer Programming</li>
-      </ul>
-    </section>
+        <div class="portfolio-stats">
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Program</span>
+            <strong>BSIT 1-03</strong>
+            <p>Currently building steady growth through hands-on coursework and team work.</p>
+          </article>
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Focus</span>
+            <strong>Coding, curiosity, and collaboration</strong>
+            <p>Enjoys learning new skills and supporting the project with calm, consistent effort.</p>
+          </article>
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Interests</span>
+            <strong>Books, basketball, sunrise and sunset</strong>
+            <p>Balances technical learning with hobbies that keep creativity and perspective strong.</p>
+          </article>
+        </div>
+      </section>
 
-    <section>
-      <h3>Schedule</h3>
-      <table>
-        <tr>
-          <th>Code</th>
-          <th>Subject</th>
-          <th>Time</th>
-          <th>Room</th>
-        </tr>
-        <tr>
-          <td>ITE 399</td>
-          <td>Human Computer Interaction</td>
-          <td>2:00 PM - 3:00 PM</td>
-          <td>PTC - 403</td>
-        </tr>
-        <tr>
-          <td>ITE 048</td>
-          <td>Discrete Structures</td>
-          <td>10:30 AM - 12:00 PM</td>
-          <td>PTC - 405</td>
-        </tr>
-        <tr>
-          <td>ITE 186</td>
-          <td>Computer Programming</td>
-          <td>4:30 PM - 6:00 PM</td>
-          <td>ITS 201</td>
-        </tr>
-      </table>
-    </section>
+      <nav class="portfolio-anchor-nav" aria-label="Portfolio sections">
+        <a class="portfolio-chip" href="#about">About</a>
+        <a class="portfolio-chip" href="#subjects">Subjects</a>
+        <a class="portfolio-chip" href="#hobbies">Hobbies</a>
+        <a class="portfolio-chip" href="#schedule">Schedule</a>
+      </nav>
 
-    <section>
-      <h4>Hobbies</h4>
-      <ul>
-        <li>Reading Wattpad</li>
-        <li>Playing Basketball</li>
-        <li>Sleeping</li>
-      </ul>
-    </section>
+      <section class="portfolio-grid">
+        <article class="portfolio-card" id="about">
+          <span class="portfolio-label">About Me</span>
+          <h2>Background</h2>
+          <p>
+            My name is Hannah. I am currently an IT student with a great interest in coding and a constant desire to learn new things. In my free time, I enjoy viewing the sunrise and sunset, spending time with my friends, reading books, and playing basketball whenever I have the opportunity.
+          </p>
+        </article>
 
-    <a class="btn" href="https://www.facebook.com" target="_blank">See More</a>
+        <article class="portfolio-card">
+          <span class="portfolio-label">Profile Focus</span>
+          <h2>What I bring</h2>
+          <p>
+            I like staying open to learning, improving my technical skills step by step, and contributing with a balanced mix of curiosity, discipline, and teamwork.
+          </p>
+        </article>
 
+        <article class="portfolio-card" id="subjects">
+          <span class="portfolio-label">Major Subjects</span>
+          <h2>Current coursework</h2>
+          <ul class="portfolio-list">
+            <li>Human Computer Interaction</li>
+            <li>Discrete Structures</li>
+            <li>Computer Programming</li>
+          </ul>
+        </article>
+
+        <article class="portfolio-card" id="hobbies">
+          <span class="portfolio-label">Hobbies</span>
+          <h2>Outside the classroom</h2>
+          <ul class="portfolio-list">
+            <li>Reading Wattpad</li>
+            <li>Playing basketball</li>
+            <li>Resting and recharging</li>
+          </ul>
+        </article>
+
+        <article class="portfolio-card portfolio-card-wide" id="schedule">
+          <div class="portfolio-card-header">
+            <div>
+              <span class="portfolio-label">Academic Schedule</span>
+              <h2>Class overview</h2>
+            </div>
+            <p class="portfolio-note">Current subject schedule as provided</p>
+          </div>
+
+          <div class="portfolio-table-shell">
+            <table class="portfolio-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject</th>
+                  <th>Time</th>
+                  <th>Room</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Code">ITE 399</td>
+                  <td data-label="Subject">Human Computer Interaction</td>
+                  <td data-label="Time">2:00 PM - 3:00 PM</td>
+                  <td data-label="Room">PTC 403</td>
+                </tr>
+                <tr>
+                  <td data-label="Code">ITE 048</td>
+                  <td data-label="Subject">Discrete Structures</td>
+                  <td data-label="Time">10:30 AM - 12:00 PM</td>
+                  <td data-label="Room">PTC 405</td>
+                </tr>
+                <tr>
+                  <td data-label="Code">ITE 186</td>
+                  <td data-label="Subject">Computer Programming</td>
+                  <td data-label="Time">4:30 PM - 6:00 PM</td>
+                  <td data-label="Room">ITS 201</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="portfolio-card portfolio-card-wide portfolio-contact">
+          <span class="portfolio-label">Connect</span>
+          <h2>Contact details</h2>
+          <p>A direct profile link has not been added yet, but the shared portfolio layout is ready for it.</p>
+          <div class="portfolio-contact-bar">
+            <span class="portfolio-contact-disabled">Facebook link not added yet</span>
+            <a class="portfolio-secondary" href="../index.html">Return To Homepage</a>
+          </div>
+        </article>
+      </section>
+    </main>
   </div>
 </body>
 </html>

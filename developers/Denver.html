@@ -1,168 +1,198 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
-
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #eef1f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 60%;
-            margin: 40px auto;
-            text-align: center;
-        }
-
-        h1 {
-            color: 	#2F4F4F;
-            margin-bottom: 5px;
-        }
-
-        h4 {
-            color: 	#2F4F4F;
-            margin-top: 0;
-        }
-
-        .section {
-            background: #ffffff;
-            padding: 20px;
-            margin: 20px 0;
-            text-align: left;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-        }
-
-        .section h3 {
-            color: #2F4F4F;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-
-        th {
-            background-color: #4682B4;
-            color: white;
-            padding: 12px;
-        }
-
-        td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .btn-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        button {
-            background-color: #4682B4;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color:  #4682B4;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jan Denver Marquez | StaySync Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="portfolio.css" />
 </head>
-
-<body>
-
-<div class="container">
-
-    <!-- PROFILE -->
-    <h1>MARQUEZ, JAN DENVER N.</h1>
-    <h4>BSIT-03</h4>
-
-    <!-- ABOUT ME -->
-    <div class="section">
-        <h3>ABOUT ME</h3>
-        <p>
-            Hi, I am JD! I’m a kind of student who’s into sports whether it’s online game or physical game. I’m logical, also a person who would choose practicality over things that won’t last. I’m independent and I can stand on my own, I don’t usually seek for help but I remember the ones who offered.
-        </p>
-    </div>
-
-    <!-- CLASS SCHEDULE -->
-    <div class="section">
-        <h3>CLASS SCHEDULE</h3>
-
-        <table>
-            <tr>
-                <th>CODE</th>
-                <th>SUBJECT</th>
-                <th>TIME</th>
-                <th>ROOM</th>
-            </tr>
-            <tr>
-                <td>ITE 399</td>
-                <td>Human Computer Interaction</td>
-                <td>M 2:00–3:00 / T 1:30–2:30</td>
-                <td>PTC 403 / ITS 201</td>
-            </tr>
-            <tr>
-                <td>ITE 186</td>
-                <td>Computer Programming II</td>
-                <td>M/T 4:30–6:00</td>
-                <td>ITS 201 / PTC 403</td>
-            </tr>
-            <tr>
-                <td>ITE 048</td>
-                <td>Discrete Structures</td>
-                <td>T 10:30–12:00</td>
-                <td>PTC 405</td>
-            </tr>
-        </table>
-
-    <!-- MY MAJOR SUBJECTS -->
-    <div class="section">
-        <h3>MY MAJOR SUBJECTS S.Y. 25–26</h3>
-        <ol type="i">
-            <li>ITE 399</li>
-            <li>ITE 186</li>
-            <li>ITE 048</li>
-        </ol>
-    </div>
-
-     <!-- HOBBIES -->
-    <div class="section">
-        <h3>MY HOBBIES</h3>
-        <ul>
-            <li>Playing online games</li>
-            <li>Bebetime</li>
-            <li>Sleeping</li>
-        </ul>
-    </div>
-
-     
-
-        <div class="btn-container">
-            <button>SEE MORE</button>
+<body class="portfolio-page">
+  <div class="page-shell portfolio-shell">
+    <header class="topbar">
+      <a class="brand brand-link" href="../index.html" aria-label="Back to StaySync homepage">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 72 72" role="presentation">
+            <defs>
+              <linearGradient id="pinGradient-denver" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffb347" />
+                <stop offset="55%" stop-color="#ff8f2d" />
+                <stop offset="100%" stop-color="#ff7f1f" />
+              </linearGradient>
+              <linearGradient id="towerGradient-denver" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#d9f1ff" />
+                <stop offset="100%" stop-color="#86c6ea" />
+              </linearGradient>
+              <linearGradient id="towerDarkGradient-denver" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#d8e8fb" />
+              </linearGradient>
+            </defs>
+            <path d="M36 7c11.7 0 21.2 9 21.2 20.1 0 14-13.9 24.4-21.2 37.9C28.7 51.5 14.8 41.1 14.8 27.1 14.8 16 24.3 7 36 7Z" fill="url(#pinGradient-denver)" />
+            <path d="M36 61.5c-7.9-13.7-18.6-23.2-18.6-34.3C17.4 17.8 25.5 10 36 10s18.6 7.8 18.6 17.2c0 11.1-10.7 20.6-18.6 34.3Z" fill="none" stroke="#ffcf8b" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M24.5 34.5 24.5 23.8 38.6 18.3 38.6 44.8 24.5 42.2Z" fill="url(#towerGradient-denver)" stroke="#1b4f95" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M39.8 12.8 52.2 19.5 52.2 40.7 39.8 47.1Z" fill="url(#towerDarkGradient-denver)" stroke="#1e4f96" stroke-width="1.5" stroke-linejoin="round" />
+            <path d="M38.6 18.3 52.2 19.5 39.8 12.8 24.5 23.8Z" fill="#8bb3ea" opacity="0.55" />
+            <path d="M22.5 45.8c4.8 4.5 20.2 5.5 27.6 0" fill="none" stroke="#7dbb1d" stroke-width="4.6" stroke-linecap="round" />
+            <path d="M19 42.6c0-2.6 2.2-4.8 5-4.8 1.2 0 2.2.3 3.1 1 .2-3.2 2.8-5.6 6-5.6 3.5 0 6.3 2.7 6.3 6.2 0 .6-.1 1.1-.2 1.6 1.7.1 3 1.5 3 3.2 0 1.8-1.5 3.3-3.3 3.3H24.1c-2.8 0-5.1-2.2-5.1-4.9Z" fill="#15906e" />
+            <g fill="#ffffff" opacity="0.95">
+              <rect x="28.1" y="27.6" width="3.8" height="4.4" rx="0.6" />
+              <rect x="34.2" y="25.5" width="3.8" height="4.4" rx="0.6" />
+              <rect x="28.1" y="34.6" width="3.8" height="4.4" rx="0.6" />
+              <rect x="34.2" y="32.8" width="3.8" height="4.4" rx="0.6" />
+              <rect x="43.2" y="22.8" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+              <rect x="47.9" y="24.1" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+              <rect x="45.5" y="30.1" width="3.2" height="3.6" rx="0.5" fill="#4093ec" />
+            </g>
+            <rect x="31.7" y="42.2" width="3.7" height="6.9" rx="0.7" fill="#2562b3" />
+          </svg>
+        </span>
+        <div class="brand-stack">
+          <span class="brand-name"><span class="brand-stay">Stay</span><span class="brand-sync">Sync</span></span>
+          <span class="brand-subtitle">Team Portfolio</span>
         </div>
-    </div>
+      </a>
+      <div class="topbar-right">
+        <a class="topbar-chip" href="../index.html">Back To StaySync</a>
+        <span class="topbar-chip portfolio-chip-static">Contact Pending</span>
+      </div>
+    </header>
 
-    
+    <main class="portfolio-main">
+      <section class="portfolio-hero">
+        <article class="portfolio-panel">
+          <span class="eyebrow">StaySync Portfolio</span>
+          <p class="portfolio-role">Member</p>
+          <h1>Marquez, Jan Denver N.</h1>
+          <p class="portfolio-summary">
+            I value practical thinking, independence, and steady effort, and I enjoy balancing academic work with sports, games, and the kind of discipline that keeps me grounded.
+          </p>
+          <div class="portfolio-actions">
+            <a class="download-button" href="#about">Read Profile</a>
+            <a class="portfolio-secondary" href="#schedule">View Schedule</a>
+          </div>
+        </article>
 
-</div>
+        <div class="portfolio-stats">
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Program</span>
+            <strong>BSIT 1-03</strong>
+            <p>Working through core IT subjects while building practical decision-making skills.</p>
+          </article>
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Focus</span>
+            <strong>Logic, discipline, and practicality</strong>
+            <p>Prefers useful solutions, clear thinking, and doing work with independence.</p>
+          </article>
+          <article class="portfolio-stat">
+            <span class="portfolio-stat-label">Interests</span>
+            <strong>Sports, online games, and downtime</strong>
+            <p>Enjoys both digital and physical competition, plus the recovery time in between.</p>
+          </article>
+        </div>
+      </section>
 
+      <nav class="portfolio-anchor-nav" aria-label="Portfolio sections">
+        <a class="portfolio-chip" href="#about">About</a>
+        <a class="portfolio-chip" href="#subjects">Subjects</a>
+        <a class="portfolio-chip" href="#hobbies">Hobbies</a>
+        <a class="portfolio-chip" href="#schedule">Schedule</a>
+      </nav>
+
+      <section class="portfolio-grid">
+        <article class="portfolio-card" id="about">
+          <span class="portfolio-label">About Me</span>
+          <h2>Background</h2>
+          <p>
+            Hi, I am JD. I am the kind of student who is into sports, whether it is online games or physical games. I am logical and practical, and I usually prefer things that last. I am also independent and able to stand on my own, although I always remember the people who offer help.
+          </p>
+        </article>
+
+        <article class="portfolio-card">
+          <span class="portfolio-label">Profile Focus</span>
+          <h2>What I bring</h2>
+          <p>
+            I like approaching work with independence, practicality, and a steady mindset, especially when a problem needs clear thinking and follow-through.
+          </p>
+        </article>
+
+        <article class="portfolio-card" id="subjects">
+          <span class="portfolio-label">Major Subjects</span>
+          <h2>Current coursework</h2>
+          <ul class="portfolio-list">
+            <li>ITE 399, Human Computer Interaction</li>
+            <li>ITE 186, Computer Programming II</li>
+            <li>ITE 048, Discrete Structures</li>
+          </ul>
+        </article>
+
+        <article class="portfolio-card" id="hobbies">
+          <span class="portfolio-label">Hobbies</span>
+          <h2>Outside the classroom</h2>
+          <ul class="portfolio-list">
+            <li>Playing online games</li>
+            <li>Sports and active competition</li>
+            <li>Sleeping and recharging</li>
+          </ul>
+        </article>
+
+        <article class="portfolio-card portfolio-card-wide" id="schedule">
+          <div class="portfolio-card-header">
+            <div>
+              <span class="portfolio-label">Academic Schedule</span>
+              <h2>Class overview</h2>
+            </div>
+            <p class="portfolio-note">BSIT academic schedule snapshot</p>
+          </div>
+
+          <div class="portfolio-table-shell">
+            <table class="portfolio-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Subject</th>
+                  <th>Time</th>
+                  <th>Room</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Code">ITE 399</td>
+                  <td data-label="Subject">Human Computer Interaction</td>
+                  <td data-label="Time">M 2:00-3:00 | T 1:30-2:30</td>
+                  <td data-label="Room">PTC 403 / ITS 201</td>
+                </tr>
+                <tr>
+                  <td data-label="Code">ITE 186</td>
+                  <td data-label="Subject">Computer Programming II</td>
+                  <td data-label="Time">M/T 4:30-6:00</td>
+                  <td data-label="Room">ITS 201 / PTC 403</td>
+                </tr>
+                <tr>
+                  <td data-label="Code">ITE 048</td>
+                  <td data-label="Subject">Discrete Structures</td>
+                  <td data-label="Time">T 10:30-12:00</td>
+                  <td data-label="Room">PTC 405</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="portfolio-card portfolio-card-wide portfolio-contact">
+          <span class="portfolio-label">Connect</span>
+          <h2>Contact details</h2>
+          <p>A direct profile link has not been added yet, but this page now follows the same shared StaySync layout as the rest of the team.</p>
+          <div class="portfolio-contact-bar">
+            <span class="portfolio-contact-disabled">Facebook link not added yet</span>
+            <a class="portfolio-secondary" href="../index.html">Return To Homepage</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
