@@ -195,6 +195,7 @@ body::before {
   border: 1px solid rgba(43, 58, 39, 0.22);
   background: rgba(246, 247, 235, 0.72);
   color: #334131;
+  text-decoration: none;
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: -0.02em;
