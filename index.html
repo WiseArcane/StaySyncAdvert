@@ -278,8 +278,11 @@
               </div>
 
               <div class="preview-demo-head">
-                <span class="preview-demo-badge">Mini Demo</span>
-                <p>Tap a workflow to preview the app.</p>
+                <div class="preview-demo-copy">
+                  <span class="preview-demo-badge">Mini Demo</span>
+                  <p>Tap a workflow to preview the app.</p>
+                </div>
+                <button class="preview-tenant-switch" type="button" data-modal-variant="tenant">Switch to Tenant's view</button>
               </div>
 
               <div class="preview-body">
@@ -575,7 +578,7 @@
       const previewDemo = document.getElementById("preview-demo");
       const previewLayout = document.querySelector(".preview-layout");
       // These are the existing page download links that should open the modal.
-      const downloadTriggers = Array.from(document.querySelectorAll("a.download-button, .topbar-chip-accent"));
+      const downloadTriggers = Array.from(document.querySelectorAll("a.download-button, .topbar-chip-accent, [data-modal-variant]"));
       const downloadModal = document.getElementById("download-modal");
       const downloadModalClose = document.getElementById("download-modal-close");
       const downloadModalTitle = document.getElementById("download-modal-title");
@@ -960,11 +963,23 @@
       }
 
       if (downloadModal && downloadPlatformButtons.length) {
-        const defaultDownloadState = {
-          title: "Install StaySync in a few quick steps",
-          copy: "Choose your platform below, download the installer, and follow the setup flow on your device.",
-          note: "Temporary downloads redirect to a blank page until the real files are ready."
+        const downloadModalStates = {
+          default: {
+            title: "Install StaySync in a few quick steps",
+            copy: "Choose your platform below, download the installer, and follow the setup flow on your device.",
+            note: "Temporary downloads redirect to a blank page until the real files are ready.",
+            showSteps: true,
+            showActions: true
+          },
+          tenant: {
+            title: "Download the system for the whole experience",
+            copy: "The tenant view is available in the full StaySync desktop app. Download the system to access the complete experience.",
+            note: "Use the download options below to continue with the full app.",
+            showSteps: false,
+            showActions: true
+          }
         };
+        let activeDownloadModalState = "default";
 
         // Clear timers so closing the modal cancels the fake download flow.
         const clearDownloadTimers = () => {
@@ -980,13 +995,15 @@
         };
 
         // Return the modal to its default instruction state each time it opens.
-        const resetDownloadModal = () => {
+        const resetDownloadModal = (stateName = "default") => {
           clearDownloadTimers();
-          downloadModalTitle.textContent = defaultDownloadState.title;
-          downloadModalCopy.textContent = defaultDownloadState.copy;
-          downloadModalNote.textContent = defaultDownloadState.note;
-          downloadModalSteps.hidden = false;
-          downloadModalActions.hidden = false;
+          activeDownloadModalState = downloadModalStates[stateName] ? stateName : "default";
+          const nextState = downloadModalStates[activeDownloadModalState];
+          downloadModalTitle.textContent = nextState.title;
+          downloadModalCopy.textContent = nextState.copy;
+          downloadModalNote.textContent = nextState.note;
+          downloadModalSteps.hidden = !nextState.showSteps;
+          downloadModalActions.hidden = !nextState.showActions;
           downloadModalLoading.hidden = true;
           downloadModalSuccess.hidden = true;
           downloadPlatformButtons.forEach((button) => {
@@ -994,8 +1011,8 @@
           });
         };
 
-        const openDownloadModal = () => {
-          resetDownloadModal();
+        const openDownloadModal = (stateName = "default") => {
+          resetDownloadModal(stateName);
           document.body.classList.add("modal-open");
           downloadModal.classList.add("is-open");
           downloadModal.setAttribute("aria-hidden", "false");
@@ -1011,7 +1028,7 @@
         downloadTriggers.forEach((trigger) => {
           trigger.addEventListener("click", (event) => {
             event.preventDefault();
-            openDownloadModal();
+            openDownloadModal(trigger.dataset.modalVariant || "default");
           });
         });
 
