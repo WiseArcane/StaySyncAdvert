@@ -678,6 +678,7 @@
   </div>
   <script>
     (() => {
+      // Cache the main page elements used by the interactive UI.
       const root = document.documentElement;
       const darkStyles = document.getElementById("theme-dark-styles");
       const themeToggle = document.getElementById("theme-toggle");
@@ -724,6 +725,7 @@
       let redirectTimer = null;
       let activeFeaturePreview = "portal";
 
+      // Keep body scrolling locked only while a modal is open.
       const syncModalBodyState = () => {
         const hasOpenModal =
           featurePreviewModal?.classList.contains("is-open") ||
@@ -822,6 +824,7 @@
         }
       };
 
+      // Fill the feature preview modal with the selected card's snapshot content.
       const renderFeaturePreview = (viewName) => {
         const nextView = featurePreviewViews[viewName];
 
@@ -903,6 +906,7 @@
         }
       };
 
+      // Open the feature snapshot modal.
       const openFeaturePreview = (viewName) => {
         renderFeaturePreview(viewName);
         featurePreviewModal?.classList.add("is-open");
@@ -910,12 +914,14 @@
         syncModalBodyState();
       };
 
+      // Close the feature snapshot modal.
       const closeFeaturePreview = () => {
         featurePreviewModal?.classList.remove("is-open");
         featurePreviewModal?.setAttribute("aria-hidden", "true");
         syncModalBodyState();
       };
 
+      // Apply the current light or dark theme across the page.
       const applyTheme = (theme) => {
         const resolvedTheme = theme === "light" ? "light" : "dark";
         const isDark = resolvedTheme === "dark";
@@ -947,6 +953,7 @@
         });
       }
 
+      // Power the live mini demo in the preview section.
       if (previewDemo) {
         const previewControls = Array.from(document.querySelectorAll("[data-preview-view]"));
         const demoSearch = document.getElementById("demo-search");
@@ -1089,6 +1096,7 @@
         let activePreviewView = "dashboard";
         let previewTimer = null;
 
+        // Render the smaller request list inside the mini demo.
         const renderPreviewList = (items) => {
           if (!demoList) {
             return;
@@ -1106,6 +1114,7 @@
             .join("");
         };
 
+        // Swap the mini demo content when a preview tab is selected.
         const setPreviewView = (view) => {
           const nextView = previewViews[view];
 
@@ -1164,6 +1173,7 @@
           });
         };
 
+        // Stop the auto-rotating mini demo.
         const stopPreviewTimer = () => {
           if (!previewTimer) {
             return;
@@ -1173,6 +1183,7 @@
           previewTimer = null;
         };
 
+        // Restart the auto-rotating mini demo.
         const startPreviewTimer = () => {
           stopPreviewTimer();
           previewTimer = window.setInterval(() => {
@@ -1207,6 +1218,7 @@
         startPreviewTimer();
       }
 
+      // Make each feature card open its matching system snapshot modal.
       featurePreviewCards.forEach((card) => {
         const openCardPreview = () => {
           openFeaturePreview(card.dataset.featurePreview || "portal");
@@ -1224,6 +1236,7 @@
       featurePreviewClose?.addEventListener("click", closeFeaturePreview);
       featurePreviewBackdrop?.addEventListener("click", closeFeaturePreview);
 
+      // Set up the on-scroll reveal effect for the main sections.
       const developerRows = Array.from(document.querySelectorAll(".developer-row"));
       const scrollFadeElements = Array.from(
         document.querySelectorAll(
@@ -1301,6 +1314,7 @@
         scrollFadeElements.forEach((element) => element.classList.add("is-visible"));
       }
 
+      // Control the download modal and its fake loading flow.
       if (downloadModal && downloadPlatformButtons.length) {
         const downloadModalStates = {
           default: {
@@ -1333,7 +1347,7 @@
           }
         };
 
-        // Return the modal to its default instruction state each time it opens.
+        // Reset the download modal back to its default content.
         const resetDownloadModal = (stateName = "default") => {
           clearDownloadTimers();
           activeDownloadModalState = downloadModalStates[stateName] ? stateName : "default";
@@ -1350,6 +1364,7 @@
           });
         };
 
+        // Open the download modal with the chosen content variant.
         const openDownloadModal = (stateName = "default") => {
           resetDownloadModal(stateName);
           downloadModal.classList.add("is-open");
@@ -1357,6 +1372,7 @@
           syncModalBodyState();
         };
 
+        // Close the download modal.
         const closeDownloadModal = () => {
           clearDownloadTimers();
           downloadModal.classList.remove("is-open");
@@ -1371,7 +1387,7 @@
           });
         });
 
-        // Show a polished loading state, then a quick success message, then redirect.
+        // Simulate a quick download preparation flow before redirecting.
         const startDownloadFlow = (platform) => {
           downloadModalTitle.textContent = "Preparing your download...";
           downloadModalCopy.textContent = `We are getting the ${platform} installer ready for you. This should only take a moment.`;
