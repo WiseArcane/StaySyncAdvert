@@ -2,6 +2,10 @@
   padding-bottom: 48px;
 }
 
+.portfolio-page {
+  color: var(--text);
+}
+
 .brand-link {
   color: inherit;
   text-decoration: none;
@@ -45,8 +49,8 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at top right, rgba(255, 248, 221, 0.84), transparent 34%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0));
+    radial-gradient(circle at top right, rgba(63, 110, 172, 0.16), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0));
 }
 
 .portfolio-panel:hover,
@@ -55,9 +59,9 @@
 .portfolio-table-shell:hover,
 .portfolio-empty-state:hover {
   transform: translateY(-4px);
-  border-color: rgba(187, 138, 47, 0.38);
-  box-shadow: 0 20px 38px rgba(96, 103, 61, 0.14);
-  background: rgba(247, 248, 236, 0.98);
+  border-color: rgba(101, 136, 173, 0.28);
+  box-shadow: 0 20px 38px rgba(0, 0, 0, 0.24);
+  background: rgba(16, 25, 38, 0.94);
 }
 
 .portfolio-panel,
@@ -75,7 +79,7 @@
 
 .portfolio-role {
   margin: 18px 0 0;
-  color: #5f6857;
+  color: #7fa7ca;
   font-size: 0.84rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -113,13 +117,15 @@
   min-height: 48px;
   padding: 0 18px;
   border-radius: 16px;
-  border: 1px solid rgba(43, 58, 39, 0.22);
-  background: rgba(246, 247, 235, 0.74);
-  color: #334131;
+  border: 1px solid rgba(90, 129, 171, 0.22);
+  background: linear-gradient(180deg, rgba(18, 32, 49, 0.92), rgba(10, 19, 31, 0.94));
+  color: #dceafb;
   font-size: 0.94rem;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36);
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
@@ -128,14 +134,16 @@
 .portfolio-chip:hover,
 .portfolio-chip:focus-visible {
   transform: translateY(-2px);
-  border-color: rgba(34, 49, 31, 0.36);
-  background: rgba(249, 250, 240, 0.96);
-  box-shadow: 0 10px 18px rgba(96, 103, 61, 0.12);
+  border-color: rgba(118, 161, 202, 0.36);
+  background: linear-gradient(180deg, rgba(28, 50, 75, 0.96), rgba(15, 29, 45, 0.98));
+  box-shadow:
+    0 14px 26px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .portfolio-secondary:focus-visible,
 .portfolio-chip:focus-visible {
-  outline: 3px solid rgba(203, 152, 61, 0.2);
+  outline: 3px solid rgba(126, 168, 198, 0.22);
   outline-offset: 4px;
 }
 
@@ -149,8 +157,8 @@
 .portfolio-chip-static,
 .portfolio-contact-disabled {
   border-style: dashed;
-  background: rgba(238, 241, 219, 0.62);
-  color: #5f6857;
+  background: rgba(14, 24, 37, 0.76);
+  color: #95abc1;
 }
 
 .portfolio-chip-static {
@@ -177,8 +185,9 @@
   width: fit-content;
   padding: 0 12px;
   border-radius: 999px;
-  background: rgba(232, 236, 209, 0.92);
-  color: #5a624f;
+  border: 1px solid rgba(101, 136, 173, 0.18);
+  background: rgba(12, 21, 34, 0.52);
+  color: #90a8bf;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -248,7 +257,8 @@
 .portfolio-table-shell {
   padding: 12px;
   border-radius: 24px;
-  background: rgba(247, 248, 237, 0.9);
+  border-color: rgba(74, 107, 150, 0.22);
+  background: rgba(11, 19, 30, 0.92);
 }
 
 .portfolio-table {
@@ -260,8 +270,8 @@
 
 .portfolio-table thead th {
   padding: 14px 16px;
-  background: #e3e7c5;
-  color: #243224;
+  background: linear-gradient(180deg, rgba(28, 50, 75, 0.98), rgba(18, 32, 49, 0.98));
+  color: #dceafb;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -271,13 +281,13 @@
 
 .portfolio-table tbody td {
   padding: 16px;
-  border-top: 1px solid rgba(59, 77, 52, 0.12);
-  background: rgba(249, 250, 240, 0.9);
+  border-top: 1px solid rgba(74, 107, 150, 0.14);
+  background: rgba(16, 27, 41, 0.88);
   font-size: 0.94rem;
 }
 
 .portfolio-table tbody tr:nth-child(even) td {
-  background: rgba(238, 241, 219, 0.86);
+  background: rgba(13, 21, 33, 0.96);
 }
 
 .portfolio-empty-state {
@@ -289,6 +299,7 @@
 .portfolio-empty-state strong {
   font-size: 1.02rem;
   letter-spacing: -0.02em;
+  color: #edf6ff;
 }
 
 .portfolio-contact {
@@ -343,13 +354,13 @@
 
   .portfolio-table tbody tr {
     margin-bottom: 12px;
-    border: 1px solid rgba(59, 77, 52, 0.14);
+    border: 1px solid rgba(74, 107, 150, 0.18);
     border-radius: 18px;
     overflow: hidden;
   }
 
   .portfolio-table tbody td {
-    border-top: 1px solid rgba(59, 77, 52, 0.12);
+    border-top: 1px solid rgba(74, 107, 150, 0.14);
   }
 
   .portfolio-table tbody td:first-child {
@@ -360,7 +371,7 @@
     content: attr(data-label);
     display: block;
     margin-bottom: 6px;
-    color: #6b7151;
+    color: #7fa7ca;
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 0.08em;
