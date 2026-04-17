@@ -58,6 +58,19 @@ main::after {
   box-shadow: none;
 }
 
+.topbar-menu-toggle {
+  border-color: rgba(148, 177, 204, 0.14);
+  background: rgba(19, 31, 46, 0.8);
+  color: #dbe7f3;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.topbar-menu-toggle:hover,
+.topbar-menu-toggle:focus-visible {
+  border-color: rgba(148, 177, 204, 0.22);
+  background: rgba(23, 37, 55, 0.94);
+}
+
 .brand-mark {
   border-color: rgba(148, 177, 204, 0.18);
   background: linear-gradient(180deg, rgba(27, 42, 60, 0.96), rgba(16, 29, 43, 0.94));

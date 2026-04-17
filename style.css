@@ -211,6 +211,34 @@ main::after {
   transition: none;
 }
 
+.topbar-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid rgba(38, 57, 83, 0.18);
+  border-radius: 16px;
+  background: rgba(248, 251, 254, 0.8);
+  color: var(--text);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.topbar-menu-toggle-bar {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.topbar-menu {
+  display: contents;
+}
+
 section[id] {
   scroll-margin-top: var(--topbar-anchor-offset);
 }
@@ -3222,26 +3250,76 @@ section[id] {
   }
 
   .topbar {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 16px;
     border-radius: 24px;
+    background: rgba(248, 251, 254, 0.72);
+    border: 1px solid rgba(38, 57, 83, 0.1);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow-soft);
   }
 
-  .topbar,
+  .topbar:hover {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .topbar-menu-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .topbar-menu-toggle[aria-expanded="true"] .topbar-menu-toggle-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .topbar-menu-toggle[aria-expanded="true"] .topbar-menu-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .topbar-menu-toggle[aria-expanded="true"] .topbar-menu-toggle-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .topbar-menu {
+    display: none;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  .topbar-menu.is-open {
+    display: grid;
+    gap: 14px;
+  }
+
   .topbar-nav,
   .topbar-right {
-    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    align-items: stretch;
     flex-direction: column;
   }
 
   .topbar-nav {
-    margin: 0;
-    width: 100%;
     justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .topbar-link,
+  .topbar-chip {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
   }
 
   .topbar-right {
     margin-left: 0;
-    width: 100%;
+    gap: 8px;
   }
 
   .hero {

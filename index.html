@@ -75,6 +75,19 @@
           <span class="brand-subtitle">Dorm And Apartment OS</span>
         </div>
       </div>
+      <button
+        class="topbar-menu-toggle"
+        id="mobile-nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="topbar-menu"
+        aria-label="Open navigation menu"
+      >
+        <span class="topbar-menu-toggle-bar" aria-hidden="true"></span>
+        <span class="topbar-menu-toggle-bar" aria-hidden="true"></span>
+        <span class="topbar-menu-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <div class="topbar-menu" id="topbar-menu">
       <nav class="topbar-nav" aria-label="Quick access">
         <a class="topbar-link" href="#overview">Overview</a>
         <a class="topbar-link" href="#features">Features</a>
@@ -86,6 +99,7 @@
       <div class="topbar-right">
         <button class="topbar-chip" id="theme-toggle" type="button" aria-pressed="false">Light Mode</button>
         <a class="topbar-chip topbar-chip-accent" href="https://github.com/WiseArcane/JavaThesisProject" target="_blank" rel="noopener noreferrer">Desktop Download</a>
+      </div>
       </div>
     </header>
 
@@ -682,6 +696,9 @@
       const root = document.documentElement;
       const darkStyles = document.getElementById("theme-dark-styles");
       const themeToggle = document.getElementById("theme-toggle");
+      const mobileNavToggle = document.getElementById("mobile-nav-toggle");
+      const topbarMenu = document.getElementById("topbar-menu");
+      const topbarNavLinks = Array.from(document.querySelectorAll(".topbar-nav .topbar-link"));
       const previewDemo = document.getElementById("preview-demo");
       const previewLayout = document.querySelector(".preview-layout");
       const featurePreviewCards = Array.from(document.querySelectorAll("[data-feature-preview]"));
@@ -732,6 +749,32 @@
           downloadModal?.classList.contains("is-open");
 
         document.body.classList.toggle("modal-open", Boolean(hasOpenModal));
+      };
+
+      const closeMobileNav = () => {
+        if (!mobileNavToggle || !topbarMenu) {
+          return;
+        }
+
+        mobileNavToggle.setAttribute("aria-expanded", "false");
+        mobileNavToggle.setAttribute("aria-label", "Open navigation menu");
+        topbarMenu.classList.remove("is-open");
+      };
+
+      const openMobileNav = () => {
+        if (!mobileNavToggle || !topbarMenu) {
+          return;
+        }
+
+        mobileNavToggle.setAttribute("aria-expanded", "true");
+        mobileNavToggle.setAttribute("aria-label", "Close navigation menu");
+        topbarMenu.classList.add("is-open");
+      };
+
+      const syncMobileNavForViewport = () => {
+        if (window.innerWidth > 680) {
+          closeMobileNav();
+        }
       };
 
       const featurePreviewViews = {
@@ -951,6 +994,30 @@
           const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
           applyTheme(nextTheme);
         });
+      }
+
+      if (mobileNavToggle && topbarMenu) {
+        mobileNavToggle.addEventListener("click", () => {
+          const isOpen = mobileNavToggle.getAttribute("aria-expanded") === "true";
+
+          if (isOpen) {
+            closeMobileNav();
+            return;
+          }
+
+          openMobileNav();
+        });
+
+        topbarNavLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.innerWidth <= 680) {
+              closeMobileNav();
+            }
+          });
+        });
+
+        window.addEventListener("resize", syncMobileNavForViewport);
+        syncMobileNavForViewport();
       }
 
       // Power the live mini demo in the preview section.
