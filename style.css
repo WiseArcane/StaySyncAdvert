@@ -25,7 +25,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--topbar-anchor-offset);
   overflow-x: clip;
   background-color: var(--bg);
 }
@@ -3241,7 +3240,7 @@ section[id] {
 @media (max-width: 680px) {
   :root {
     --sticky-topbar-offset: 12px;
-    --topbar-anchor-offset: 240px;
+    --topbar-anchor-offset: 120px;
   }
 
   .page-shell {
